@@ -2,7 +2,7 @@ Package.describe({
   name: 'creatorkuang:react-meteor-status',
   version: '0.0.1',
   // Brief, one-line summary of the package.
-  summary: '',
+  summary: 'react package for meteor status ',
   // URL to the Git repository containing the source code for this package.
   git: 'https://github.com/creatorkuang/react-meteor-status.git',
   author:'creatorkuang@gmail.com',
@@ -14,7 +14,7 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.2.0.2');
   api.use('ecmascript');
-  api.use('react');
+  api.use('react@0.14.1_1');
   api.addFiles('client/connectStatus.jsx','client');
   api.export('ConnectStatus');
 });
