@@ -97,7 +97,7 @@ ConnectStatus=React.createClass({
 		let lang=this.props.lang;
 		let style=this.getStyles();
 		if(!this.state.isConnected||this.state.isConnecting){
-			let reconnect=<span style={Object.assign({},style.btn,this.props.btnStyle)} onClick={this._reconnect}>{lang.retryNow}</span>
+			let reconnect=<span style={_.extend({},style.btn,this.props.btnStyle)} onClick={this._reconnect}>{lang.retryNow}</span>
 			let text=lang.waiting+this.state.retryTime+lang.waitingAfter
 			if(this.state.isOffline){
 				text=this.props.lang.offline
@@ -106,8 +106,8 @@ ConnectStatus=React.createClass({
 				text=this.props.lang.connecting
 			}
 			pageNode=(
-				<div style={Object.assign({},style.root,this.props.style)}>
-					{reconnect} <span style={Object.assign({},style.text,this.props.textStyle)}>{text}</span>
+				<div style={_.extend({},style.root,this.props.style)}>
+					{reconnect} <span style={_.extend({},style.text,this.props.textStyle)}>{text}</span>
 					<div style={{clear:'both'}}></div>
 				</div>
 			)
