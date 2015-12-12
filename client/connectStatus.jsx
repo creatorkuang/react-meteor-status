@@ -42,7 +42,8 @@ ConnectStatus=React.createClass({
 			     }, 500)
 		    	self.setState({
 		    		isConnected:false,
-		    		isConnecting:false
+		    		isConnecting:false,
+		    		retryHandle:retryHandle
 		    	})
 		    }else{
 		    	clearRetryInterval()
@@ -71,6 +72,9 @@ ConnectStatus=React.createClass({
 		    }	
 			}
 	   	Meteor.autorun(trackStatus);
+	},
+	componentWillMount() {
+	  clearInterval(this.state.retryHandle); 
 	},
 	getStyles(){
 		return {

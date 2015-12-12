@@ -1,6 +1,6 @@
 Package.describe({
   name: 'creatorkuang:react-meteor-status',
-  version: '0.0.4',
+  version: '0.0.5',
   // Brief, one-line summary of the package.
   summary: 'react package for meteor status ',
   // URL to the Git repository containing the source code for this package.
